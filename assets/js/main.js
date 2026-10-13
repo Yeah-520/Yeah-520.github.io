@@ -21,10 +21,8 @@
     if (saved === 'light' || saved === 'dark') {
       return saved;
     }
-    return window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light';
+    // 无保存值时默认亮色主题，不再跟随系统偏好
+    return 'light';
   }
 
   function applyTheme(theme) {
