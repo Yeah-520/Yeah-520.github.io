@@ -59,9 +59,18 @@
     root.appendChild(p);
   }
 
-  // 按分类分组并平铺渲染
+  // 按分类分组，渲染为可折叠（手风琴）条目，默认收起
   function render(docs) {
     root.innerHTML = '';
+
+    // 工具栏：全部展开 / 收起
+    var toolbar = document.createElement('div');
+    toolbar.className = 'knowledge-toolbar';
+    var toggleAll = document.createElement('button');
+    toggleAll.type = 'button';
+    toggleAll.className = 'knowledge-toggle-all';
+    toolbar.appendChild(toggleAll);
+    root.appendChild(toolbar);
 
     var groups = {};
     var order = [];
@@ -72,6 +81,8 @@
       }
       groups[doc.category].push(doc);
     });
+
+    var items = [];
 
     order.forEach(function (category) {
       var section = document.createElement('section');
@@ -90,24 +101,64 @@
 
       groups[category].forEach(function (doc) {
         var article = document.createElement('article');
-        article.className = 'knowledge-doc';
+        article.className = 'knowledge-doc is-collapsed';
 
-        var h3 = document.createElement('h3');
-        h3.className = 'knowledge-doc-title';
-        h3.textContent = doc.title;
+        var toggle = document.createElement('button');
+        toggle.type = 'button';
+        toggle.className = 'knowledge-doc-toggle';
+        toggle.setAttribute('aria-expanded', 'false');
+
+        var title = document.createElement('span');
+        title.className = 'knowledge-doc-title';
+        title.textContent = doc.title;
+
+        var arrow = document.createElement('span');
+        arrow.className = 'knowledge-doc-arrow';
+        arrow.setAttribute('aria-hidden', 'true');
+
+        toggle.appendChild(title);
+        toggle.appendChild(arrow);
 
         var body = document.createElement('div');
         body.className = 'knowledge-doc-body';
         body.innerHTML = doc.html;
 
-        article.appendChild(h3);
+        toggle.addEventListener('click', function () {
+          var collapsed = article.classList.toggle('is-collapsed');
+          toggle.setAttribute('aria-expanded', String(!collapsed));
+          updateToggleAll();
+        });
+
+        article.appendChild(toggle);
         article.appendChild(body);
         list.appendChild(article);
+
+        items.push({ article: article, toggle: toggle });
       });
 
       section.appendChild(list);
       root.appendChild(section);
     });
+
+    function updateToggleAll() {
+      var allExpanded = items.every(function (item) {
+        return !item.article.classList.contains('is-collapsed');
+      });
+      toggleAll.textContent = allExpanded ? '收起全部' : '展开全部';
+    }
+
+    toggleAll.addEventListener('click', function () {
+      var allExpanded = items.every(function (item) {
+        return !item.article.classList.contains('is-collapsed');
+      });
+      items.forEach(function (item) {
+        item.article.classList.toggle('is-collapsed', allExpanded);
+        item.toggle.setAttribute('aria-expanded', String(!allExpanded));
+      });
+      updateToggleAll();
+    });
+
+    updateToggleAll();
   }
 
   function load() {
