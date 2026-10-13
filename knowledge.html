@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yeah 的知识库 —— 按分类整理的知识点与学习笔记。">
+  <title>知识库 · Yeah</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-active-nav="knowledge">
+
+  <header class="site-header">
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Yeah 首页">
+        <span class="brand-mark" aria-hidden="true">Y</span>
+        <span class="brand-name">Yeah</span>
+      </a>
+      <nav id="site-nav" class="site-nav" aria-label="主导航">
+        <ul class="nav-list">
+          <li><a class="nav-link" data-nav="home" href="index.html">首页</a></li>
+          <li><a class="nav-link" data-nav="portfolio" href="portfolio.html">作品集</a></li>
+          <li><a class="nav-link" data-nav="resume" href="resume.html">简历</a></li>
+          <li><a class="nav-link" data-nav="blog" href="blog.html">博客</a></li>
+          <li><a class="nav-link" data-nav="tools" href="tools.html">工具</a></li>
+          <li><a class="nav-link" data-nav="knowledge" href="knowledge.html">知识库</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换暗色模式">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航菜单">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h1 class="section-title">知识库</h1>
+          <p class="section-sub">按分类整理的知识点与学习笔记，持续补充中。</p>
+        </div>
+
+        <!-- 前端基础 -->
+        <div class="knowledge-section reveal">
+          <h2 class="knowledge-title"><span class="dot"></span>前端基础</h2>
+          <div class="knowledge-grid">
+            <div class="knowledge-card">
+              <div>
+                <h3>HTML 语义化</h3>
+                <p>合理使用 header、nav、main、article、footer 等标签，提升可读性与无障碍体验。</p>
+                <span class="tag">HTML</span>
+              </div>
+            </div>
+            <div class="knowledge-card">
+              <div>
+                <h3>CSS 布局：Flexbox 与 Grid</h3>
+                <p>一维与二维布局的核心差异与典型使用场景，如何选择更合适。</p>
+                <span class="tag">CSS</span>
+              </div>
+            </div>
+            <div class="knowledge-card">
+              <div>
+                <h3>JavaScript 事件循环</h3>
+                <p>理解调用栈、任务队列与微任务，厘清异步执行顺序。</p>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="knowledge-card">
+              <div>
+                <h3>响应式设计</h3>
+                <p>媒体查询、流式布局与弹性单位配合，实现多端适配。</p>
+                <span class="tag">CSS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 工程化 -->
+        <div class="knowledge-section reveal">
+          <h2 class="knowledge-title"><span class="dot"></span>工程化</h2>
+          <div class="knowledge-grid">
+            <div class="knowledge-card">
+              <div>
+                <h3>Git 分支策略</h3>
+                <p>主干开发、feature 分支与 release 流程，保证协作有序。</p>
+                <span class="tag">Git</span>
+              </div>
+            </div>
+            <div class="knowledge-card">
+              <div>
+                <h3>前端构建工具</h3>
+                <p>Vite、Webpack 的工作原理与适用场景对比。</p>
+                <span class="tag">Vite</span>
+              </div>
+            </div>
+            <div class="knowledge-card">
+              <div>
+                <h3>代码规范与格式化</h3>
+                <p>借助 ESLint、Prettier 与统一约定，减少无谓的代码争议。</p>
+                <span class="tag">工程规范</span>
+              </div>
+            </div>
+            <div class="knowledge-card">
+              <div>
+                <h3>CI / CD 基础</h3>
+                <p>自动化测试、构建与部署流水线，让发布更可靠。</p>
+                <span class="tag">DevOps</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 设计 -->
+        <div class="knowledge-section reveal">
+          <h2 class="knowledge-title"><span class="dot"></span>设计</h2>
+          <div class="knowledge-grid">
+            <div class="knowledge-card">
+              <div>
+                <h3>设计令牌（Design Tokens）</h3>
+                <p>将颜色、间距等设计决策抽象为变量，统一视觉与协作语言。</p>
+                <span class="tag">设计系统</span>
+              </div>
+            </div>
+            <div class="knowledge-card">
+              <div>
+                <h3>排版与留白</h3>
+                <p>字号层级、行高与呼吸感，决定阅读体验的基础。</p>
+                <span class="tag">排版</span>
+              </div>
+            </div>
+            <div class="knowledge-card">
+              <div>
+                <h3>无障碍设计（A11y）</h3>
+                <p>对比度、焦点管理、aria 标签，让产品对每个人都可用。</p>
+                <span class="tag">无障碍</span>
+              </div>
+            </div>
+            <div class="knowledge-card">
+              <div>
+                <h3>色彩系统</h3>
+                <p>主色、中性色与语义色的搭配原则，构建克制而清晰的配色。</p>
+                <span class="tag">色彩</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 学习成长 -->
+        <div class="knowledge-section reveal">
+          <h2 class="knowledge-title"><span class="dot"></span>学习成长</h2>
+          <div class="knowledge-grid">
+            <div class="knowledge-card">
+              <div>
+                <h3>前端学习路线</h3>
+                <p>从基础三件套到框架、工程化与性能优化的进阶路径。</p>
+                <span class="tag">路线图</span>
+              </div>
+            </div>
+            <div class="knowledge-card">
+              <div>
+                <h3>值得一读的书单</h3>
+                <p>编程、设计与思维方法相关的推荐书目，持续更新。</p>
+                <span class="tag">书单</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand">Yeah</p>
+      <p class="footer-note">© <span id="year">2025</span> Yeah · 用代码构建，用热爱驱动</p>
+      <ul class="footer-links">
+        <li>
+          <a href="https://github.com/Yeah-520" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.04.77 2.1 0 1.52-.01 2.74-.01 3.11 0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"></path></svg>
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a href="mailto:yeah@example.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            邮箱
+          </a>
+        </li>
+        <li><a href="resume.html">简历</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

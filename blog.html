@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yeah 的技术博客 —— 记录前端开发、工程化与学习思考。">
+  <title>技术博客 · Yeah</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-active-nav="blog">
+
+  <header class="site-header">
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Yeah 首页">
+        <span class="brand-mark" aria-hidden="true">Y</span>
+        <span class="brand-name">Yeah</span>
+      </a>
+      <nav id="site-nav" class="site-nav" aria-label="主导航">
+        <ul class="nav-list">
+          <li><a class="nav-link" data-nav="home" href="index.html">首页</a></li>
+          <li><a class="nav-link" data-nav="portfolio" href="portfolio.html">作品集</a></li>
+          <li><a class="nav-link" data-nav="resume" href="resume.html">简历</a></li>
+          <li><a class="nav-link" data-nav="blog" href="blog.html">博客</a></li>
+          <li><a class="nav-link" data-nav="tools" href="tools.html">工具</a></li>
+          <li><a class="nav-link" data-nav="knowledge" href="knowledge.html">知识库</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换暗色模式">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航菜单">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container" style="max-width: 820px;">
+        <div class="section-head reveal">
+          <h1 class="section-title">技术博客</h1>
+          <p class="section-sub">记录学习与踩坑的过程，分享对前端与工程化的思考。</p>
+        </div>
+
+        <div class="card-grid" style="grid-template-columns: 1fr;">
+
+          <article class="card post-card reveal">
+            <p class="post-date"><time datetime="2025-01-12">2025 年 1 月 12 日</time></p>
+            <h2 class="card-title">
+              <a href="blog/sample-post.html">如何搭建一个零依赖的静态个人网站</a>
+            </h2>
+            <p class="card-desc">不用任何构建工具与框架，仅凭 HTML、CSS 和原生 JavaScript，就能搭建一个响应式、支持暗色模式的个人网站。本文记录完整的实现思路。</p>
+            <div class="tag-list">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <a class="card-link" href="blog/sample-post.html">
+              阅读全文
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+            </a>
+          </article>
+
+          <article class="card post-card reveal">
+            <p class="post-date"><time datetime="2025-01-05">2025 年 1 月 5 日</time></p>
+            <h2 class="card-title">CSS 变量实践：用设计令牌统一视觉</h2>
+            <p class="card-desc">颜色、间距、圆角、阴影全部收敛到 CSS 变量，让暗色模式与主题定制变得轻而易举。</p>
+            <div class="tag-list">
+              <span class="tag">CSS</span>
+              <span class="tag">设计系统</span>
+            </div>
+            <a class="card-link" href="blog/sample-post.html">
+              阅读全文
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+            </a>
+          </article>
+
+          <article class="card post-card reveal">
+            <p class="post-date"><time datetime="2024-12-28">2024 年 12 月 28 日</time></p>
+            <h2 class="card-title">用 IntersectionObserver 实现滚动渐入动画</h2>
+            <p class="card-desc">告别复杂的滚动监听，用浏览器原生的 IntersectionObserver 优雅地实现元素进入视口时的渐入效果。</p>
+            <div class="tag-list">
+              <span class="tag">JavaScript</span>
+              <span class="tag">动效</span>
+            </div>
+            <a class="card-link" href="blog/sample-post.html">
+              阅读全文
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+            </a>
+          </article>
+
+          <article class="card post-card reveal">
+            <p class="post-date"><time datetime="2024-12-18">2024 年 12 月 18 日</time></p>
+            <h2 class="card-title">语义化 HTML 与无障碍基础</h2>
+            <p class="card-desc">正确使用 header、nav、main、section 等标签，并搭配 aria 属性，让网站对每一个人都友好。</p>
+            <div class="tag-list">
+              <span class="tag">HTML</span>
+              <span class="tag">无障碍</span>
+            </div>
+            <a class="card-link" href="blog/sample-post.html">
+              阅读全文
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+            </a>
+          </article>
+
+          <article class="card post-card reveal">
+            <p class="post-date"><time datetime="2024-12-10">2024 年 12 月 10 日</time></p>
+            <h2 class="card-title">Git 提交信息规范实践</h2>
+            <p class="card-desc">一份清晰、可读的提交历史是团队协作的基石。聊聊 Conventional Commits 与实用约定。</p>
+            <div class="tag-list">
+              <span class="tag">Git</span>
+              <span class="tag">工程化</span>
+            </div>
+            <a class="card-link" href="blog/sample-post.html">
+              阅读全文
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand">Yeah</p>
+      <p class="footer-note">© <span id="year">2025</span> Yeah · 用代码构建，用热爱驱动</p>
+      <ul class="footer-links">
+        <li>
+          <a href="https://github.com/Yeah-520" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.04.77 2.1 0 1.52-.01 2.74-.01 3.11 0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"></path></svg>
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a href="mailto:yeah@example.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            邮箱
+          </a>
+        </li>
+        <li><a href="resume.html">简历</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

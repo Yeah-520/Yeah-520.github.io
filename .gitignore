@@ -1,0 +1,7 @@
+**/target/
+.idea
+*.iml
+*.
+
+# WorkBuddy 项目数据（不提交）
+.workbuddy/
