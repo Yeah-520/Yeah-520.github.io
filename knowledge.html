@@ -6,6 +6,9 @@
   <meta name="description" content="Yeah 的知识库 —— 按分类整理的知识点与学习笔记。">
   <title>知识库 · Yeah</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/vendor/markdown-it.min.js" defer></script>
+  <script src="assets/js/knowledge.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body data-active-nav="knowledge">
 
@@ -53,131 +56,7 @@
           <p class="section-sub">按分类整理的知识点与学习笔记，持续补充中。</p>
         </div>
 
-        <!-- 前端基础 -->
-        <div class="knowledge-section reveal">
-          <h2 class="knowledge-title"><span class="dot"></span>前端基础</h2>
-          <div class="knowledge-grid">
-            <div class="knowledge-card">
-              <div>
-                <h3>HTML 语义化</h3>
-                <p>合理使用 header、nav、main、article、footer 等标签，提升可读性与无障碍体验。</p>
-                <span class="tag">HTML</span>
-              </div>
-            </div>
-            <div class="knowledge-card">
-              <div>
-                <h3>CSS 布局：Flexbox 与 Grid</h3>
-                <p>一维与二维布局的核心差异与典型使用场景，如何选择更合适。</p>
-                <span class="tag">CSS</span>
-              </div>
-            </div>
-            <div class="knowledge-card">
-              <div>
-                <h3>JavaScript 事件循环</h3>
-                <p>理解调用栈、任务队列与微任务，厘清异步执行顺序。</p>
-                <span class="tag">JavaScript</span>
-              </div>
-            </div>
-            <div class="knowledge-card">
-              <div>
-                <h3>响应式设计</h3>
-                <p>媒体查询、流式布局与弹性单位配合，实现多端适配。</p>
-                <span class="tag">CSS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 工程化 -->
-        <div class="knowledge-section reveal">
-          <h2 class="knowledge-title"><span class="dot"></span>工程化</h2>
-          <div class="knowledge-grid">
-            <div class="knowledge-card">
-              <div>
-                <h3>Git 分支策略</h3>
-                <p>主干开发、feature 分支与 release 流程，保证协作有序。</p>
-                <span class="tag">Git</span>
-              </div>
-            </div>
-            <div class="knowledge-card">
-              <div>
-                <h3>前端构建工具</h3>
-                <p>Vite、Webpack 的工作原理与适用场景对比。</p>
-                <span class="tag">Vite</span>
-              </div>
-            </div>
-            <div class="knowledge-card">
-              <div>
-                <h3>代码规范与格式化</h3>
-                <p>借助 ESLint、Prettier 与统一约定，减少无谓的代码争议。</p>
-                <span class="tag">工程规范</span>
-              </div>
-            </div>
-            <div class="knowledge-card">
-              <div>
-                <h3>CI / CD 基础</h3>
-                <p>自动化测试、构建与部署流水线，让发布更可靠。</p>
-                <span class="tag">DevOps</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 设计 -->
-        <div class="knowledge-section reveal">
-          <h2 class="knowledge-title"><span class="dot"></span>设计</h2>
-          <div class="knowledge-grid">
-            <div class="knowledge-card">
-              <div>
-                <h3>设计令牌（Design Tokens）</h3>
-                <p>将颜色、间距等设计决策抽象为变量，统一视觉与协作语言。</p>
-                <span class="tag">设计系统</span>
-              </div>
-            </div>
-            <div class="knowledge-card">
-              <div>
-                <h3>排版与留白</h3>
-                <p>字号层级、行高与呼吸感，决定阅读体验的基础。</p>
-                <span class="tag">排版</span>
-              </div>
-            </div>
-            <div class="knowledge-card">
-              <div>
-                <h3>无障碍设计（A11y）</h3>
-                <p>对比度、焦点管理、aria 标签，让产品对每个人都可用。</p>
-                <span class="tag">无障碍</span>
-              </div>
-            </div>
-            <div class="knowledge-card">
-              <div>
-                <h3>色彩系统</h3>
-                <p>主色、中性色与语义色的搭配原则，构建克制而清晰的配色。</p>
-                <span class="tag">色彩</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 学习成长 -->
-        <div class="knowledge-section reveal">
-          <h2 class="knowledge-title"><span class="dot"></span>学习成长</h2>
-          <div class="knowledge-grid">
-            <div class="knowledge-card">
-              <div>
-                <h3>前端学习路线</h3>
-                <p>从基础三件套到框架、工程化与性能优化的进阶路径。</p>
-                <span class="tag">路线图</span>
-              </div>
-            </div>
-            <div class="knowledge-card">
-              <div>
-                <h3>值得一读的书单</h3>
-                <p>编程、设计与思维方法相关的推荐书目，持续更新。</p>
-                <span class="tag">书单</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div id="knowledge-root" class="knowledge-root"></div>
 
       </div>
     </section>
@@ -205,6 +84,5 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
 </body>
 </html>
