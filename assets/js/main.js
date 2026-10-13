@@ -127,6 +127,121 @@
     showAll();
   }
 
+  /* ---------- 联系表单（mailto） ---------- */
+
+  var CONTACT_EMAIL = '1903617153@qq.com';
+  var DEFAULT_SUBJECT = '来自 Yeah 个人网站的留言';
+
+  var contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      var nameEl = document.getElementById('contact-name');
+      var emailEl = document.getElementById('contact-email');
+      var subjectEl = document.getElementById('contact-subject');
+      var messageEl = document.getElementById('contact-message');
+
+      var name = nameEl ? nameEl.value.trim() : '';
+      var email = emailEl ? emailEl.value.trim() : '';
+      var subject = subjectEl ? subjectEl.value.trim() : '';
+      var message = messageEl ? messageEl.value.trim() : '';
+
+      // 姓名与留言为必填；正常情况下由浏览器原生校验拦截，此处兜底
+      if (!name || !message) {
+        return;
+      }
+
+      if (!subject) {
+        subject = DEFAULT_SUBJECT;
+      }
+
+      // 正文：发件人姓名 + 邮箱 + 空行 + 留言内容
+      var bodyLines = [];
+      if (name) {
+        bodyLines.push('发件人：' + name);
+      }
+      if (email) {
+        bodyLines.push('邮箱：' + email);
+      }
+      bodyLines.push('');
+      bodyLines.push(message);
+
+      var mailto =
+        'mailto:' +
+        CONTACT_EMAIL +
+        '?subject=' +
+        encodeURIComponent(subject) +
+        '&body=' +
+        encodeURIComponent(bodyLines.join('\n'));
+
+      window.location.href = mailto;
+    });
+  }
+
+  /* ---------- 复制邮箱 ---------- */
+
+  var copyEmailBtn = document.getElementById('copy-email');
+  if (copyEmailBtn) {
+    var originalLabel = copyEmailBtn.textContent.trim();
+
+    // 兼容非 https 环境：临时 textarea + execCommand 兜底复制
+    function fallbackCopy(text) {
+      var textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.setAttribute('readonly', '');
+      textarea.style.position = 'fixed';
+      textarea.style.left = '-9999px';
+      document.body.appendChild(textarea);
+      textarea.select();
+      var ok = false;
+      try {
+        ok = document.execCommand('copy');
+      } catch (err) {
+        ok = false;
+      }
+      document.body.removeChild(textarea);
+      return ok;
+    }
+
+    function flashCopied() {
+      copyEmailBtn.textContent = '已复制';
+      copyEmailBtn.classList.add('is-copied');
+      window.setTimeout(function () {
+        copyEmailBtn.textContent = originalLabel;
+        copyEmailBtn.classList.remove('is-copied');
+      }, 1600);
+    }
+
+    function showCopyError() {
+      copyEmailBtn.textContent = '请手动复制：' + CONTACT_EMAIL;
+      window.setTimeout(function () {
+        copyEmailBtn.textContent = originalLabel;
+      }, 2400);
+    }
+
+    function copyEmail() {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard
+          .writeText(CONTACT_EMAIL)
+          .then(flashCopied)
+          .catch(function () {
+            if (fallbackCopy(CONTACT_EMAIL)) {
+              flashCopied();
+            } else {
+              showCopyError();
+            }
+          });
+      } else if (fallbackCopy(CONTACT_EMAIL)) {
+        flashCopied();
+      } else {
+        showCopyError();
+      }
+    }
+
+    copyEmailBtn.addEventListener('click', copyEmail);
+  }
+
   /* ---------- 页脚年份 ---------- */
 
   var yearEl = document.getElementById('year');
