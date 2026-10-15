@@ -1,239 +1,327 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Yeah 的个人网站 —— 前端开发爱好者，记录作品、简历、博客、工具与知识库。">
-  <title>Yeah · 个人主页</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body data-active-nav="home">
 
-  <header class="site-header">
-    <a class="skip-link" href="#main">跳到主要内容</a>
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Yeah 首页">
-        <span class="brand-mark" aria-hidden="true">Y</span>
-        <span class="brand-name">Yeah</span>
-      </a>
-      <nav id="site-nav" class="site-nav" aria-label="主导航">
-        <ul class="nav-list">
-          <li><a class="nav-link" data-nav="home" href="index.html">首页</a></li>
-          <li><a class="nav-link" data-nav="portfolio" href="portfolio.html">作品集</a></li>
-          <li><a class="nav-link" data-nav="resume" href="resume.html">简历</a></li>
-          <li><a class="nav-link" data-nav="blog" href="blog.html">博客</a></li>
-          <li><a class="nav-link" data-nav="tools" href="tools.html">工具</a></li>
-          <li><a class="nav-link" data-nav="knowledge" href="knowledge.html">知识库</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换暗色模式">
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="4"></circle>
-            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
-          </svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-        </button>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航菜单">
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-        </button>
-      </div>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yeah 的个人网站 —— 前端开发爱好者，记录作品、简历、博客、工具与知识库。">
+    <title>Yeah · 个人主页</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
 
-  <main id="main">
+  <body data-active-nav="home">
 
-    <!-- Hero 名片区 -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <span class="avatar avatar-lg" aria-hidden="true">Y</span>
-        <h1 class="hero-title">欢迎来到我的个人网站 <span class="accent"></span></h1>
-        <p class="hero-slogan">把想法写成代码，把代码变成作品。</p>
-        <p class="hero-sub">全栈开发爱好者 · 终身学习者 · 热爱开源与分享。这里是我在网络世界的小小角落。</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="portfolio.html">
-            查看作品
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
-          </a>
-          <button class="btn btn-ghost" id="contact-btn" type="button">联系我</button>
+    <header class="site-header">
+      <a class="skip-link" href="#main">跳到主要内容</a>
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Yeah 首页">
+          <span class="brand-mark" aria-hidden="true">Y</span>
+          <span class="brand-name">Yeah</span>
+        </a>
+        <nav id="site-nav" class="site-nav" aria-label="主导航">
+          <ul class="nav-list">
+            <li><a class="nav-link" data-nav="home" href="index.html">首页</a></li>
+            <li><a class="nav-link" data-nav="portfolio" href="portfolio.html">作品集</a></li>
+            <li><a class="nav-link" data-nav="resume" href="resume.html">简历</a></li>
+            <li><a class="nav-link" data-nav="blog" href="blog.html">博客</a></li>
+            <li><a class="nav-link" data-nav="tools" href="tools.html">工具</a></li>
+            <li><a class="nav-link" data-nav="ai" href="ai.html">AI</a></li>
+            <li><a class="nav-link" data-nav="knowledge" href="knowledge.html">知识库</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换暗色模式">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41">
+              </path>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航菜单">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
         </div>
-        <ul class="social-list" aria-label="社交与联系方式">
-          <li>
-            <a href="https://github.com/Yeah-520" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.04.77 2.1 0 1.52-.01 2.74-.01 3.11 0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"></path>
+      </div>
+    </header>
+
+    <main id="main">
+
+      <!-- Hero 名片区 -->
+      <section class="hero">
+        <div class="container hero-inner">
+          <span class="avatar avatar-lg" aria-hidden="true">Y</span>
+          <h1 class="hero-title">欢迎来到我的个人网站 <span class="accent"></span></h1>
+          <p class="hero-slogan">把想法写成代码，把代码变成作品。</p>
+          <p class="hero-sub">全栈开发爱好者 · 终身学习者 · 热爱开源与分享。这里是我在网络世界的小小角落。</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="portfolio.html">
+              查看作品
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
               </svg>
+            </a>
+            <button class="btn btn-ghost" id="contact-btn" type="button">联系我</button>
+          </div>
+          <ul class="social-list" aria-label="社交与联系方式">
+            <li>
+              <a href="https://github.com/Yeah-520" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.04.77 2.1 0 1.52-.01 2.74-.01 3.11 0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z">
+                  </path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:1903617153@qq.com" aria-label="电子邮箱">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://blog.example.com" target="_blank" rel="noopener noreferrer" aria-label="RSS 订阅">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path>
+                  <circle cx="5" cy="19" r="1"></circle>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 关于我 -->
+      <section class="section section-alt" aria-labelledby="about-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2 class="section-title" id="about-title">关于我</h2>
+            <p class="section-sub">用简单的方式，做可靠的事。</p>
+          </div>
+          <div class="about-grid">
+            <div class="about-text reveal">
+              <p>
+                一名专注于 <strong>Ai</strong> 全栈开发的工程师，热爱把复杂的问题拆解成清晰、优雅的解决方案。
+                我相信好的产品不仅要有漂亮的外观，更要有扎实的工程基础与良好的用户体验。
+              </p>
+              <p>
+                学习之余，我喜欢阅读技术博客、折腾各种效率工具，并把学习过程中的思考记录下来。
+                这个网站正是我用原生 HTML、CSS 和 JavaScript 从零搭建的 —— 没有构建工具，没有框架，只有干净直接的代码。
+              </p>
+              <p>
+                如果你对我的作品或想法感兴趣，欢迎通过邮件与我交流，或直接前往
+                <a class="accent" href="resume.html">在线简历</a> 了解更多。
+              </p>
+            </div>
+            <div class="about-highlights reveal">
+              <div class="highlight-card">
+                <p class="highlight-value">加载中...</p>
+                <p class="highlight-label">年开发经验</p>
+              </div>
+              <div class="highlight-card">
+                <p id="portfolio" class="highlight-value">加载中...</p>
+                <p class="highlight-label">开源项目</p>
+              </div>
+              <div class="highlight-card">
+                <p class="highlight-value">...</p>
+                <p class="highlight-label">技术博客</p>
+              </div>
+              <div class="highlight-card">
+                <p class="highlight-value">∞</p>
+                <p class="highlight-label">好奇心</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 精选项目 -->
+      <section class="section" aria-labelledby="featured-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2 class="section-title" id="featured-title">精选项目</h2>
+            <p class="section-sub">几个我比较满意的作品，更多内容见作品集。</p>
+          </div>
+          <div class="card-grid">
+            <article class="card reveal">
+              <h3 class="card-title">个人主页</h3>
+              <p class="card-desc">你现在正在浏览的网站 —— 零依赖的响应式静态站点，支持暗色模式与移动端菜单。</p>
+              <div class="tag-list">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <a class="card-link" href="https://github.com/Yeah-520/Yeah-520.github.io" target="_blank"
+                rel="noopener noreferrer">
+                查看源码
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </article>
+            <article class="card reveal">
+              <h3 class="card-title">任务清单 Todo</h3>
+              <p class="card-desc">轻量待办应用，支持拖拽排序、分类筛选，数据本地存储，打开即用。</p>
+              <div class="tag-list">
+                <span class="tag">React</span>
+                <span class="tag">TypeScript</span>
+              </div>
+              <a class="card-link" href="portfolio.html">了解详情</a>
+            </article>
+          </div>
+          <p class="reveal" style="margin-top: var(--space-6); text-align: center;">
+            <a class="btn btn-ghost" href="portfolio.html">查看全部作品</a>
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-brand">Yeah</p>
+        <p class="footer-note">© <span id="year">2025</span> Yeah · 用代码构建，用热爱驱动</p>
+        <ul class="footer-links">
+          <li>
+            <a href="https://github.com/Yeah-520" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.04.77 2.1 0 1.52-.01 2.74-.01 3.11 0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z">
+                </path>
+              </svg>
+              GitHub
             </a>
           </li>
           <li>
-            <a href="mailto:1903617153@qq.com" aria-label="电子邮箱">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <a href="mailto:1903617153@qq.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
                 <rect x="2" y="4" width="20" height="16" rx="2"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
               </svg>
+              邮箱
             </a>
           </li>
           <li>
-            <a href="https://blog.example.com" target="_blank" rel="noopener noreferrer" aria-label="RSS 订阅">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path>
-                <circle cx="5" cy="19" r="1"></circle>
+            <a href="resume.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <path d="M14 2v6h6"></path>
+                <path d="M16 13H8M16 17H8M10 9H8"></path>
               </svg>
+              简历
             </a>
           </li>
         </ul>
       </div>
-    </section>
+    </footer>
 
-    <!-- 关于我 -->
-    <section class="section section-alt" aria-labelledby="about-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 class="section-title" id="about-title">关于我</h2>
-          <p class="section-sub">用简单的方式，做可靠的事。</p>
-        </div>
-        <div class="about-grid">
-          <div class="about-text reveal">
-            <p>
-              一名专注于 <strong>Ai</strong> 全栈开发的工程师，热爱把复杂的问题拆解成清晰、优雅的解决方案。
-              我相信好的产品不仅要有漂亮的外观，更要有扎实的工程基础与良好的用户体验。
-            </p>
-            <p>
-              学习之余，我喜欢阅读技术博客、折腾各种效率工具，并把学习过程中的思考记录下来。
-              这个网站正是我用原生 HTML、CSS 和 JavaScript 从零搭建的 —— 没有构建工具，没有框架，只有干净直接的代码。
-            </p>
-            <p>
-              如果你对我的作品或想法感兴趣，欢迎通过邮件与我交流，或直接前往
-              <a class="accent" href="resume.html">在线简历</a> 了解更多。
-            </p>
-          </div>
-          <div class="about-highlights reveal">
-            <div class="highlight-card">
-              <p class="highlight-value">1+</p>
-              <p class="highlight-label">年开发经验</p>
+    <!-- 联系我弹窗 -->
+    <div class="modal" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" hidden>
+      <div class="modal-overlay" data-modal-close></div>
+      <div class="modal-panel" role="document">
+        <button class="modal-close" type="button" data-modal-close aria-label="关闭弹窗">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 6 6 18M6 6l12 12"></path>
+          </svg>
+        </button>
+        <h2 class="modal-title" id="contact-modal-title">联系我</h2>
+        <ul class="contact-list">
+          <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+            </span>
+            <div class="contact-info">
+              <span class="contact-label">电话</span>
+              <a class="contact-value" href="tel:13800000000">138-0000-0000</a>
             </div>
-            <div class="highlight-card">
-              <p class="highlight-value">2+</p>
-              <p class="highlight-label">开源项目</p>
+          </li>
+          <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+            </span>
+            <div class="contact-info">
+              <span class="contact-label">邮箱</span>
+              <a class="contact-value" href="mailto:1903617153@qq.com">1903617153@qq.com</a>
             </div>
-            <div class="highlight-card">
-              <p class="highlight-value">...</p>
-              <p class="highlight-label">技术博客</p>
+          </li>
+          <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.04.77 2.1 0 1.52-.01 2.74-.01 3.11 0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z">
+                </path>
+              </svg>
+            </span>
+            <div class="contact-info">
+              <span class="contact-label">GitHub</span>
+              <a class="contact-value" href="https://github.com/Yeah-520" target="_blank"
+                rel="noopener noreferrer">github.com/Yeah-520</a>
             </div>
-            <div class="highlight-card">
-              <p class="highlight-value">∞</p>
-              <p class="highlight-label">好奇心</p>
-            </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
-    </section>
-
-    <!-- 精选项目 -->
-    <section class="section" aria-labelledby="featured-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 class="section-title" id="featured-title">精选项目</h2>
-          <p class="section-sub">几个我比较满意的作品，更多内容见作品集。</p>
-        </div>
-        <div class="card-grid">
-          <article class="card reveal">
-            <h3 class="card-title">个人主页</h3>
-            <p class="card-desc">你现在正在浏览的网站 —— 零依赖的响应式静态站点，支持暗色模式与移动端菜单。</p>
-            <div class="tag-list">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-            </div>
-            <a class="card-link" href="https://github.com/Yeah-520/Yeah-520.github.io" target="_blank" rel="noopener noreferrer">
-              查看源码
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
-            </a>
-          </article>
-          <article class="card reveal">
-            <h3 class="card-title">任务清单 Todo</h3>
-            <p class="card-desc">轻量待办应用，支持拖拽排序、分类筛选，数据本地存储，打开即用。</p>
-            <div class="tag-list">
-              <span class="tag">React</span>
-              <span class="tag">TypeScript</span>
-            </div>
-            <a class="card-link" href="portfolio.html">了解详情</a>
-          </article>
-        </div>
-        <p class="reveal" style="margin-top: var(--space-6); text-align: center;">
-          <a class="btn btn-ghost" href="portfolio.html">查看全部作品</a>
-        </p>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p class="footer-brand">Yeah</p>
-      <p class="footer-note">© <span id="year">2025</span> Yeah · 用代码构建，用热爱驱动</p>
-      <ul class="footer-links">
-        <li>
-          <a href="https://github.com/Yeah-520" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.04.77 2.1 0 1.52-.01 2.74-.01 3.11 0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"></path></svg>
-            GitHub
-          </a>
-        </li>
-        <li>
-          <a href="mailto:1903617153@qq.com">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-            邮箱
-          </a>
-        </li>
-        <li><a href="resume.html">简历</a></li>
-      </ul>
     </div>
-  </footer>
 
-  <!-- 联系我弹窗 -->
-  <div class="modal" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" hidden>
-    <div class="modal-overlay" data-modal-close></div>
-    <div class="modal-panel" role="document">
-      <button class="modal-close" type="button" data-modal-close aria-label="关闭弹窗">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"></path></svg>
-      </button>
-      <h2 class="modal-title" id="contact-modal-title">联系我</h2>
-      <ul class="contact-list">
-        <li class="contact-item">
-          <span class="contact-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-          </span>
-          <div class="contact-info">
-            <span class="contact-label">电话</span>
-            <a class="contact-value" href="tel:13800000000">138-0000-0000</a>
-          </div>
-        </li>
-        <li class="contact-item">
-          <span class="contact-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-          </span>
-          <div class="contact-info">
-            <span class="contact-label">邮箱</span>
-            <a class="contact-value" href="mailto:1903617153@qq.com">1903617153@qq.com</a>
-          </div>
-        </li>
-        <li class="contact-item">
-          <span class="contact-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.04.77 2.1 0 1.52-.01 2.74-.01 3.11 0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"></path></svg>
-          </span>
-          <div class="contact-info">
-            <span class="contact-label">GitHub</span>
-            <a class="contact-value" href="https://github.com/Yeah-520" target="_blank" rel="noopener noreferrer">github.com/Yeah-520</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
+    <script src="assets/js/main.js"></script>
+  </body>
 
-  <script src="assets/js/main.js"></script>
-</body>
+  <script>
+    const currentYear = new Date().getFullYear();
+    const diff = currentYear - 2025;
+    document.querySelector('.highlight-value').textContent = `${diff}+`;
+
+    // const currentPortfolio = 0;
+    // document.querySelector('#portfolio').textContent = `${currentPortfolio}`;
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        // 请求portfolio目录下的页面，修改为你的真实路径
+        const res = await fetch('./portfolio.html');
+        const htmlStr = await res.text();
+
+        // 把获取到的html字符串解析成虚拟DOM
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(htmlStr, 'text/html');
+
+        // 统计 .card-title 的数量
+        const count = doc.querySelectorAll('.card-title').length;
+        console.log("card-title总数：", count);
+
+        // 你可以把数量渲染到index页面任意位置，例如：
+        document.querySelector('#portfolio').textContent = `${count}`;
+      } catch (err) {
+        console.error('读取portfolio页面失败：', err);
+      }
+    });
+
+
+
+
+  </script>
+
 </html>

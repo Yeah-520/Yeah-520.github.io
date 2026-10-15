@@ -211,6 +211,47 @@ button {
   margin-bottom: 0;
 }
 
+.ai-intro {
+  margin-bottom: var(--space-6);
+  color: var(--color-text-muted);
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+.ai-path {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.ai-path-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.ai-path-steps {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.ai-path-step {
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: var(--radius-full);
+}
+
+.ai-path-arrow {
+  color: var(--color-text-muted);
+}
+
 /* 强调色文字 */
 .accent {
   color: var(--color-accent);

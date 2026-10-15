@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yeah 的 AI 工具导航 —— AI 内容介绍与常用 AI 工具推荐。">
+    <title>AI 工具 · Yeah</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+
+  <body data-active-nav="ai">
+
+    <header class="site-header">
+      <a class="skip-link" href="#main">跳到主要内容</a>
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Yeah 首页">
+          <span class="brand-mark" aria-hidden="true">Y</span>
+          <span class="brand-name">Yeah</span>
+        </a>
+        <nav id="site-nav" class="site-nav" aria-label="主导航">
+          <ul class="nav-list">
+            <li><a class="nav-link" data-nav="home" href="index.html">首页</a></li>
+            <li><a class="nav-link" data-nav="portfolio" href="portfolio.html">作品集</a></li>
+            <li><a class="nav-link" data-nav="resume" href="resume.html">简历</a></li>
+            <li><a class="nav-link" data-nav="blog" href="blog.html">博客</a></li>
+            <li><a class="nav-link" data-nav="tools" href="tools.html">工具</a></li>
+            <li><a class="nav-link" data-nav="ai" href="ai.html">AI</a></li>
+            <li><a class="nav-link" data-nav="knowledge" href="knowledge.html">知识库</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换暗色模式">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41">
+              </path>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航菜单">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <h1 class="section-title">AI 工具</h1>
+            <p class="section-sub">AI 内容介绍与常用 AI 工具导航，持续更新。</p>
+          </div>
+
+          <div class="ai-path reveal">
+            <span class="ai-path-label">偏经济用法</span>
+            <div class="ai-path-steps">
+              <span class="ai-path-step">豆包</span>
+              <span class="ai-path-arrow" aria-hidden="true">→</span>
+              <span class="ai-path-step">DeepSeek</span>
+              <span class="ai-path-arrow" aria-hidden="true">→</span>
+              <span class="ai-path-step">ChatGPT</span>
+              <span class="ai-path-arrow" aria-hidden="true">→</span>
+              <span class="ai-path-step">Claude</span>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="knowledge-title"><span class="dot" style="background-color: red;"></span>程序员的自述</h2>
+            <p class="ai-intro reveal">
+              一开始我还是老老实实的敲代码，直到听说了Vibe
+              Coding，安装了Claude，试了一下，感觉挺兴奋的，很多不会不懂的东西都懂了，后来才知道，Token是要钱的，但是这个时候我已经陷阱去了，彻底上瘾了，花了很多钱，还带着朋友一起来玩，现在已经没有回头路了，我真的很后悔<del>为什么不早点用</del>。<br>
+              温馨提示：使用脖子上的东西<strong>思考</strong>可以<strong>减少Token消耗</strong>。
+            </p>
+          </div>
+
+          <!-- 对话助手 -->
+          <div class="knowledge-section reveal">
+            <h2 class="knowledge-title"><span class="dot"></span>对话助手</h2>
+            <div class="card-grid">
+              <article class="card tool-card reveal">
+                <div class="tool-head">
+                  <span class="tool-logo" aria-hidden="true">GPT</span>
+                  <div>
+                    <h2 class="card-title" style="font-size: 1rem;">ChatGPT</h2>
+                    <p class="tool-category">对话助手</p>
+                  </div>
+                </div>
+                <p class="card-desc">OpenAI 的通用对话助手，擅长问答、写作、翻译与头脑风暴。</p>
+                <a class="card-link" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">访问官网</a>
+              </article>
+
+              <article class="card tool-card reveal">
+                <div class="tool-head">
+                  <span class="tool-logo" aria-hidden="true">Cl</span>
+                  <div>
+                    <h2 class="card-title" style="font-size: 1rem;">Claude</h2>
+                    <p class="tool-category">对话助手</p>
+                  </div>
+                </div>
+                <p class="card-desc">Anthropic 的对话助手，长文本理解与推理能力出色。</p>
+                <a class="card-link" href="https://claude.ai/" target="_blank" rel="noopener noreferrer">访问官网</a>
+              </article>
+
+              <article class="card tool-card reveal">
+                <div class="tool-head">
+                  <span class="tool-logo" aria-hidden="true">文</span>
+                  <div>
+                    <h2 class="card-title" style="font-size: 1rem;">文心一言</h2>
+                    <p class="tool-category">对话助手</p>
+                  </div>
+                </div>
+                <p class="card-desc">百度的中文大模型助手，贴近中文语境与创作场景。</p>
+                <a class="card-link" href="https://yiyan.baidu.com/" target="_blank" rel="noopener noreferrer">访问官网</a>
+              </article>
+
+              <article class="card tool-card reveal">
+                <div class="tool-head">
+                  <span class="tool-logo" aria-hidden="true">Ki</span>
+                  <div>
+                    <h2 class="card-title" style="font-size: 1rem;">Kimi</h2>
+                    <p class="tool-category">对话助手</p>
+                  </div>
+                </div>
+                <p class="card-desc">月之暗面出品，擅长超长文档的阅读、总结与问答。</p>
+                <a class="card-link" href="https://kimi.moonshot.cn/" target="_blank" rel="noopener noreferrer">访问官网</a>
+              </article>
+            </div>
+          </div>
+
+          <!-- 编程辅助 -->
+          <div class="knowledge-section reveal">
+            <h2 class="knowledge-title"><span class="dot"></span>编程辅助</h2>
+            <div class="card-grid">
+              <article class="card tool-card reveal">
+                <div class="tool-head">
+                  <span class="tool-logo" aria-hidden="true">Co</span>
+                  <div>
+                    <h2 class="card-title" style="font-size: 1rem;">GitHub Copilot</h2>
+                    <p class="tool-category">编程辅助</p>
+                  </div>
+                </div>
+                <p class="card-desc">代码补全与生成助手，与 IDE 无缝集成，大幅提升编码效率。</p>
+                <a class="card-link" href="https://github.com/features/copilot" target="_blank"
+                  rel="noopener noreferrer">访问官网</a>
+              </article>
+
+              <article class="card tool-card reveal">
+                <div class="tool-head">
+                  <span class="tool-logo" aria-hidden="true">Cu</span>
+                  <div>
+                    <h2 class="card-title" style="font-size: 1rem;">Cursor</h2>
+                    <p class="tool-category">编程辅助</p>
+                  </div>
+                </div>
+                <p class="card-desc">AI 优先的代码编辑器，提供对话式的编程与重构体验。</p>
+                <a class="card-link" href="https://cursor.com/" target="_blank" rel="noopener noreferrer">访问官网</a>
+              </article>
+
+              <article class="card tool-card reveal">
+                <div class="tool-head">
+                  <span class="tool-logo" aria-hidden="true">灵</span>
+                  <div>
+                    <h2 class="card-title" style="font-size: 1rem;">通义灵码</h2>
+                    <p class="tool-category">编程辅助</p>
+                  </div>
+                </div>
+                <p class="card-desc">阿里的中文编程助手，覆盖编码、测试与代码解释全流程。</p>
+                <a class="card-link" href="https://tongyi.aliyun.com/lingma" target="_blank"
+                  rel="noopener noreferrer">访问官网</a>
+              </article>
+            </div>
+          </div>
+
+          <!-- 图像生成 -->
+          <div class="knowledge-section reveal">
+            <h2 class="knowledge-title"><span class="dot"></span>图像生成</h2>
+            <div class="card-grid">
+              <article class="card tool-card reveal">
+                <div class="tool-head">
+                  <span class="tool-logo" aria-hidden="true">MJ</span>
+                  <div>
+                    <h2 class="card-title" style="font-size: 1rem;">Midjourney</h2>
+                    <p class="tool-category">图像生成</p>
+                  </div>
+                </div>
+                <p class="card-desc">高质量图像生成，艺术感与细节表现力强。</p>
+                <a class="card-link" href="https://www.midjourney.com/" target="_blank"
+                  rel="noopener noreferrer">访问官网</a>
+              </article>
+
+              <article class="card tool-card reveal">
+                <div class="tool-head">
+                  <span class="tool-logo" aria-hidden="true">SD</span>
+                  <div>
+                    <h2 class="card-title" style="font-size: 1rem;">Stable Diffusion</h2>
+                    <p class="tool-category">图像生成</p>
+                  </div>
+                </div>
+                <p class="card-desc">开源图像生成模型，可本地部署、自由定制。</p>
+                <a class="card-link" href="https://stability.ai/" target="_blank" rel="noopener noreferrer">访问官网</a>
+              </article>
+
+              <article class="card tool-card reveal">
+                <div class="tool-head">
+                  <span class="tool-logo" aria-hidden="true">即</span>
+                  <div>
+                    <h2 class="card-title" style="font-size: 1rem;">即梦</h2>
+                    <p class="tool-category">图像生成</p>
+                  </div>
+                </div>
+                <p class="card-desc">字节跳动的 AI 图像与视频创作工具，中文提示词友好。</p>
+                <a class="card-link" href="https://jimeng.jianying.com/" target="_blank"
+                  rel="noopener noreferrer">访问官网</a>
+              </article>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-brand">Yeah</p>
+        <p class="footer-note">© <span id="year">2025</span> Yeah · 用代码构建，用热爱驱动</p>
+        <ul class="footer-links">
+          <li>
+            <a href="https://github.com/Yeah-520" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.04.77 2.1 0 1.52-.01 2.74-.01 3.11 0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z">
+                </path>
+              </svg>
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="mailto:1903617153@qq.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              邮箱
+            </a>
+          </li>
+          <li><a href="resume.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <path d="M14 2v6h6"></path>
+                <path d="M16 13H8M16 17H8M10 9H8"></path>
+              </svg>简历</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+
+</html>
