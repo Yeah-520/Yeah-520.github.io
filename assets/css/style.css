@@ -52,6 +52,16 @@
 
   /* 动效 */
   --transition: 160ms ease;
+
+  /* 代码高亮 */
+  --code-bg: #f6f8fa;
+  --code-keyword: #2563eb;
+  --code-string: #16a34a;
+  --code-comment: #9aa4b2;
+  --code-number: #d97706;
+  --code-function: #7c3aed;
+  --code-title: #1a1d21;
+  --code-builtin: #0891b2;
 }
 
 /* 暗色模式（由 JS 在 <html> 上设置 data-theme="dark"） */
@@ -70,6 +80,15 @@
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 1px 3px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.35);
   --shadow-lg: 0 2px 6px rgba(0, 0, 0, 0.5), 0 18px 44px rgba(0, 0, 0, 0.45);
+
+  --code-bg: #161d27;
+  --code-keyword: #7ba0ff;
+  --code-string: #6ee7a0;
+  --code-comment: #6b7280;
+  --code-number: #fbbf24;
+  --code-function: #c4b5fd;
+  --code-title: #e7eaef;
+  --code-builtin: #67e8f9;
 }
 
 /* ---------- 基础重置 ---------- */
@@ -162,7 +181,7 @@ button {
 }
 
 .section-head {
-  max-width: 640px;
+  max-width: auto;
   margin-bottom: var(--space-6);
 }
 
@@ -177,6 +196,19 @@ button {
 .section-sub {
   color: var(--color-text-muted);
   font-size: 1rem;
+}
+
+.section-head-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-2);
+}
+
+.section-head-row .section-title {
+  margin-bottom: 0;
 }
 
 /* 强调色文字 */
@@ -483,7 +515,7 @@ button {
 
 .hero-sub {
   color: var(--color-text-muted);
-  max-width: 560px;
+  max-width: 600px;
 }
 
 .hero-actions {
@@ -569,6 +601,7 @@ button {
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
@@ -654,6 +687,24 @@ button {
   transform: translateX(3px);
 }
 
+/* 整卡可点击：主链接覆盖整个卡片（stretched link） */
+.card-link::after,
+.card-title-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.card-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-title-link:hover {
+  color: var(--color-accent);
+}
+
 /* ---------- 作品集 ---------- */
 .project-card .project-top {
   display: flex;
@@ -682,6 +733,8 @@ button {
 .project-links {
   display: flex;
   gap: var(--space-2);
+  position: relative;
+  z-index: 2;
 }
 
 .icon-link {
@@ -1095,8 +1148,8 @@ button {
 
 .knowledge-toolbar {
   display: flex;
-  justify-content: flex-end;
-  margin-bottom: var(--space-2);
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .knowledge-toggle-all {
@@ -1191,6 +1244,58 @@ button {
   color: inherit;
   font-size: 0.86rem;
   line-height: 1.6;
+}
+
+/* 代码高亮（highlight.js token 配色） */
+.knowledge-doc-body pre.hljs {
+  background-color: var(--code-bg);
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-type {
+  color: var(--code-keyword);
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-attr,
+.hljs-template-variable {
+  color: var(--code-string);
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: var(--code-comment);
+  font-style: italic;
+}
+
+.hljs-number,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-variable {
+  color: var(--code-number);
+}
+
+.hljs-title,
+.hljs-title.function_,
+.hljs-function,
+.hljs-section {
+  color: var(--code-function);
+}
+
+.hljs-built_in,
+.hljs-params,
+.hljs-meta {
+  color: var(--code-builtin);
+}
+
+.hljs-name,
+.hljs-tag,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: var(--code-title);
 }
 
 .knowledge-doc-body blockquote {
@@ -1428,4 +1533,181 @@ button {
   .about-highlights {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* ---------- 返回顶部按钮 ---------- */
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 60;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-accent);
+  color: var(--color-on-accent);
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity var(--transition), transform var(--transition),
+    visibility var(--transition), background-color var(--transition);
+}
+
+.back-to-top svg {
+  width: 20px;
+  height: 20px;
+}
+
+.back-to-top:hover {
+  background-color: var(--color-accent-strong);
+}
+
+.back-to-top:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ---------- 联系我弹窗 ---------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+}
+
+.modal[hidden] {
+  display: none;
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 18, 24, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+.modal-panel {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 420px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-6);
+}
+
+.modal-close {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-radius: var(--radius-full);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.modal-close:hover {
+  background: var(--color-bg-alt);
+  color: var(--color-text);
+}
+
+.modal-close:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.modal-close svg {
+  width: 18px;
+  height: 18px;
+}
+
+.modal-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--space-5);
+}
+
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.contact-icon {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  border-radius: var(--radius-md);
+}
+
+.contact-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.contact-label {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.contact-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+
+.contact-value:hover {
+  color: var(--color-accent);
+}
+
+body.modal-open {
+  overflow: hidden;
 }

@@ -18,8 +18,28 @@
     return;
   }
 
-  // 安全设置：不渲染 md 中的原始 HTML（防 XSS），开启链接自动识别
-  var md = window.markdownit({ html: false, linkify: true });
+  var hljs = window.hljs || null;
+
+  // 安全设置：不渲染 md 中的原始 HTML（防 XSS），开启链接自动识别，代码块用 highlight.js 高亮
+  var md = window.markdownit({
+    html: false,
+    linkify: true,
+    highlight: function (str, lang) {
+      if (hljs) {
+        if (lang && hljs.getLanguage(lang)) {
+          try {
+            return '<pre class="hljs"><code>' +
+              hljs.highlight(str, { language: lang, ignoreIllegals: true }).value +
+              '</code></pre>';
+          } catch (e) { /* 回退到自动检测 */ }
+        }
+        try {
+          return '<pre class="hljs"><code>' + hljs.highlightAuto(str).value + '</code></pre>';
+        } catch (e) { /* 回退到纯转义 */ }
+      }
+      return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
+    }
+  });
 
   function fileNameFromPath(path) {
     var parts = String(path).split('/');
@@ -63,14 +83,16 @@
   function render(docs) {
     root.innerHTML = '';
 
-    // 工具栏：全部展开 / 收起
-    var toolbar = document.createElement('div');
-    toolbar.className = 'knowledge-toolbar';
+    // 工具栏按钮放到与「知识库」标题平行的位置（#knowledge-toolbar 容器）
+    var toolbar = document.getElementById('knowledge-toolbar');
     var toggleAll = document.createElement('button');
     toggleAll.type = 'button';
     toggleAll.className = 'knowledge-toggle-all';
-    toolbar.appendChild(toggleAll);
-    root.appendChild(toolbar);
+    if (toolbar) {
+      toolbar.appendChild(toggleAll);
+    } else {
+      root.appendChild(toggleAll);
+    }
 
     var groups = {};
     var order = [];

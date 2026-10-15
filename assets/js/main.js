@@ -248,4 +248,71 @@
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
   }
+
+  /* ---------- 返回顶部按钮 ---------- */
+
+  var backTopBtn = document.createElement('button');
+  backTopBtn.type = 'button';
+  backTopBtn.className = 'back-to-top';
+  backTopBtn.setAttribute('aria-label', '返回顶部');
+  backTopBtn.innerHTML =
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ' +
+    'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<polyline points="18 15 12 9 6 15"></polyline></svg>';
+  document.body.appendChild(backTopBtn);
+
+  var SCROLL_THRESHOLD = 400;
+
+  function updateBackTop() {
+    var y = window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop || 0;
+    backTopBtn.classList.toggle('is-visible', y > SCROLL_THRESHOLD);
+  }
+
+  window.addEventListener('scroll', updateBackTop, { passive: true });
+  updateBackTop();
+
+  backTopBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /* ---------- 联系我弹窗 ---------- */
+
+  var contactBtn = document.getElementById('contact-btn');
+  var contactModal = document.getElementById('contact-modal');
+
+  if (contactBtn && contactModal) {
+    var lastFocus = null;
+
+    function openContactModal() {
+      lastFocus = document.activeElement;
+      contactModal.hidden = false;
+      document.body.classList.add('modal-open');
+      var closeBtn = contactModal.querySelector('.modal-close');
+      if (closeBtn) {
+        closeBtn.focus();
+      }
+    }
+
+    function closeContactModal() {
+      contactModal.hidden = true;
+      document.body.classList.remove('modal-open');
+      if (lastFocus && typeof lastFocus.focus === 'function') {
+        lastFocus.focus();
+      }
+    }
+
+    contactBtn.addEventListener('click', openContactModal);
+
+    contactModal.querySelectorAll('[data-modal-close]').forEach(function (el) {
+      el.addEventListener('click', closeContactModal);
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && !contactModal.hidden) {
+        closeContactModal();
+      }
+    });
+  }
 })();
